@@ -1,0 +1,24 @@
+node_modules/
+.tmp/
+
+# local scratch: captured snapshots, probe scripts, run logs
+*.log
+*.bak
+*.json.tmp
+h1.json
+h2.json
+snap.json
+sj.json
+s2.json
+s3.json
+s4.json
+probe.mjs
+probe2.mjs
+bench.mjs
+frames.mjs
+frames2.mjs
+t1.mjs
+
+.DS_Store
+Thumbs.db
+desktop.ini

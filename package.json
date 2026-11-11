@@ -1,0 +1,25 @@
+{
+  "name": "eventhorizon-ops",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Real-time holographic HUD for AI agent sessions, driven by live session events and host metrics.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "agent",
+    "observability",
+    "hud",
+    "canvas",
+    "sse",
+    "eventhorizon-ops"
+  ],
+  "engines": {
+    "node": ">=22.15.0"
+  },
+  "scripts": {
+    "start": "node plugin/server.mjs 7788",
+    "test": "node selftest.mjs"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

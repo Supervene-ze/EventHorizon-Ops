@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>EventHorizon-Ops · LIVE AGENT CONSOLE</title>
+<link rel="stylesheet" href="eventhorizon.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="brand">
+      <h1 id="brandTitle">EventHorizon-Ops · LIVE CONSOLE</h1>
+      <p id="brandSub">state.json · sessions.json · stream</p>
+    </div>
+    <div class="kpi"><div class="k">TURNS</div><div class="v" id="k0">0</div><div class="seg"><i id="s0"></i></div></div>
+    <div class="kpi"><div class="k">STEPS</div><div class="v" id="k1">0</div><div class="seg"><i id="s1"></i></div></div>
+    <div class="kpi"><div class="k">TOOL CALLS</div><div class="v" id="k2">0</div><div class="seg"><i id="s2"></i></div></div>
+    <div class="kpi"><div class="k">OUT TOKENS</div><div class="v pink" id="k3">0</div><div class="seg"><i id="s3"></i></div></div>
+    <div class="kpi"><div class="k">CACHE HIT</div><div class="v" id="k4">0</div><div class="seg"><i id="s4"></i></div></div>
+  </header>
+
+  <div class="stage" id="stageWrap">
+    <canvas id="stage"></canvas>
+    <div class="ov chk" id="chk">
+      <b id="chkK">CTX PRESSURE</b>
+      <span id="chkV">0.0%</span>
+    </div>
+    <div class="ov status">
+      <div class="big" id="stBig">0 / 0 EVENTS · IDLE</div>
+      <div class="sm" id="stSm">session stream · host sampler</div>
+      <div class="sm zoom">
+        <button type="button" id="zOut" title="zoom out">−</button>
+        <b id="zoomTag">×1.00</b>
+        <button type="button" id="zIn" title="zoom in">+</button>
+        <button type="button" id="zFit" title="reset view">FIT</button>
+        <span class="sep"></span>
+        <button type="button" id="uiOut" title="interface text smaller">A−</button>
+        <button type="button" id="uiIn" title="interface text larger">A+</button>
+        <span class="hint">wheel / drag / 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panels">
+    <div class="p">
+      <h3>EVENT FEED <span class="rate" id="logRate">0/m</span></h3>
+      <div class="feed" id="feed"></div>
+    </div>
+    <div class="p">
+      <h3>TOOL LATENCY / CALLS</h3>
+      <div class="rows" id="tools"></div>
+    </div>
+    <div class="p">
+      <h3>HOST / PROCESSES</h3>
+      <div class="rows" id="host"></div>
+    </div>
+    <div class="p">
+      <h3>TOKEN THROUGHPUT</h3>
+      <canvas id="cTok"></canvas>
+    </div>
+    <div class="p">
+      <h3>STEP CADENCE</h3>
+      <canvas id="cStep"></canvas>
+    </div>
+    <div class="p">
+      <h3>TURN LEDGER</h3>
+      <div class="rows" id="turns"></div>
+    </div>
+    <div class="p">
+      <h3>MODEL / CONTEXT</h3>
+      <div class="rows" id="model"></div>
+    </div>
+    <div class="p">
+      <h3>SESSION LEDGER <span class="rate" id="sessCount">0</span></h3>
+      <div class="rows" id="sessions"></div>
+    </div>
+  </div>
+</div>
+<script>
+window.addEventListener('error', function (e) {
+  var s = document.getElementById('stSm');
+  if (s) s.textContent = 'script error: ' + (e.message || 'unknown');
+});
+</script>
+<script src="eventhorizon.js"></script>
+</body>
+</html>
