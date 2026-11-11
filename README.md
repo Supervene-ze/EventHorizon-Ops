@@ -240,15 +240,26 @@ NOTICE.md                 版权与数据真实性声明
 
 ## 上传到 GitHub
 
-这个目录本身就是仓库根，已经清干净了，直接推。
+这个目录本身就是仓库根，已经 `git init` 并完成第一个提交（`EventHorizon-Ops 1.0.0`，17 个文件，分支 `main`）。只差接上你自己的远程地址：
 
 ```bash
-cd /d/你的路径/eventhorizon-ops
+cd D:\\EventHorizon-Ops
+git remote add origin https://github.com/你的账号/eventhorizon-ops.git
+git push -u origin main
+```
+
+还没建远程仓库就先在 GitHub 网页建一个空仓库（名字随意，比如 `eventhorizon-ops`），再跑上面两条。
+
+想要一份全新的提交历史，删掉 `.git` 重来：
+
+```bash
+cd D:\\EventHorizon-Ops
+rm -rf .git
 git init
 git add .
 git commit -m "EventHorizon-Ops 1.0.0"
 git branch -M main
-git remote add origin https://github.com/<你的账号>/eventhorizon-ops.git
+git remote add origin https://github.com/你的账号/eventhorizon-ops.git
 git push -u origin main
 ```
 
