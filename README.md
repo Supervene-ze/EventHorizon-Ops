@@ -243,7 +243,7 @@ NOTICE.md                 版权与数据真实性声明
 这个目录本身就是仓库根，已经 `git init` 并完成第一个提交（`EventHorizon-Ops 1.0.0`，17 个文件，分支 `main`）。只差接上你自己的远程地址：
 
 ```bash
-cd D:\\EventHorizon-Ops
+cd D:\EventHorizon-Ops
 git remote add origin https://github.com/你的账号/eventhorizon-ops.git
 git push -u origin main
 ```
@@ -253,7 +253,7 @@ git push -u origin main
 想要一份全新的提交历史，删掉 `.git` 重来：
 
 ```bash
-cd D:\\EventHorizon-Ops
+cd D:\EventHorizon-Ops
 rm -rf .git
 git init
 git add .
