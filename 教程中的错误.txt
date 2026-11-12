@@ -1,0 +1,2 @@
+关于NOTICE.md 与 README.md 两个文件中，在下面说明文档中有接入 github 的说明，这个不用管，忽略即可，这个是让 AI 帮我放入 github 仓库的说明，忘记删除了忽略即可
+tis：PolyForm Noncommercial License 1.0.0，仅限非商业使用。全文见 `LICENSE`，转载与二创须保留 `NOTICE.md` 里的声明并注明出处。
